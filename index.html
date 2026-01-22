@@ -1,80 +1,68 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agri - الرئيسية</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <title>Agri | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="font-sans bg-gray-50">
+<body>
 
-    <!-- Navbar -->
-    <header class="bg-green-700 text-white">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="index.html" class="text-xl font-bold">Agri</a>
-            <nav class="space-x-6">
-                <a href="index.html" class="hover:underline">الرئيسية</a>
-                <a href="about.html" class="hover:underline">من نحن</a>
-                <a href="products.html" class="hover:underline">المنتجات</a>
-                <a href="quality.html" class="hover:underline">الجودة</a>
-                <a href="news.html" class="hover:underline">الأخبار</a>
-                <a href="contact.html" class="hover:underline">اتصل بنا</a>
-            </nav>
-        </div>
-    </header>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <div class="logo">AGRI</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="quality.html">Quality</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="bg-green-100 text-green-900 py-20 text-center">
-        <h1 class="text-5xl font-bold mb-4">أهلاً بكم في Agri</h1>
-        <p class="text-lg max-w-xl mx-auto">أفضل حلول الزراعة الذكية والجودة العالية في المنتجات الزراعية.</p>
-        <a href="products.html" class="inline-block mt-6 px-6 py-3 bg-green-700 text-white rounded hover:bg-green-800">اكتشف منتجاتنا</a>
-    </section>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <h1>Agricultural Solutions</h1>
+    <p>High quality fertilizers & agricultural products</p>
+    <a href="products.html" class="btn">Explore Products</a>
+  </div>
+</section>
 
-    <!-- Featured Products Section -->
-    <section class="container mx-auto py-16">
-        <h2 class="text-3xl font-semibold mb-6 text-center">منتجات مميزة</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
-                <img src="https://via.placeholder.com/200x150" alt="منتج 1" class="mb-4 w-full rounded">
-                <h3 class="font-bold mb-2">منتج 1</h3>
-                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
-                <a href="product1.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
-            </div>
-            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
-                <img src="https://via.placeholder.com/200x150" alt="منتج 2" class="mb-4 w-full rounded">
-                <h3 class="font-bold mb-2">منتج 2</h3>
-                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
-                <a href="product2.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
-            </div>
-            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
-                <img src="https://via.placeholder.com/200x150" alt="منتج 3" class="mb-4 w-full rounded">
-                <h3 class="font-bold mb-2">منتج 3</h3>
-                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
-                <a href="product3.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
-            </div>
-            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
-                <img src="https://via.placeholder.com/200x150" alt="منتج 4" class="mb-4 w-full rounded">
-                <h3 class="font-bold mb-2">منتج 4</h3>
-                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
-                <a href="product4.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
-            </div>
-        </div>
-    </section>
+<!-- ===== PRODUCTS ===== -->
+<section class="products">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
 
-    <!-- About Section -->
-    <section class="bg-green-50 py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-6">من نحن</h2>
-            <p class="max-w-2xl mx-auto text-gray-700">شركة Agri متخصصة في تقديم حلول زراعية مبتكرة، مع التركيز على الجودة والاستدامة.</p>
-        </div>
-    </section>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/p1.jpg" />
+        <h3>Product One</h3>
+        <a href="product-1.html">Read More</a>
+      </div>
 
-    <!-- Footer -->
-    <footer class="bg-green-700 text-white py-8 mt-12">
-        <div class="container mx-auto text-center">
-            <p>© 2026 Agri. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
+      <div class="product-card">
+        <img src="images/p2.jpg" />
+        <h3>Product Two</h3>
+        <a href="product-2.html">Read More</a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/p3.jpg" />
+        <h3>Product Three</h3>
+        <a href="product-3.html">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>© 2026 AGRI. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
