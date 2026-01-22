@@ -5,6 +5,19 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+<script>
+  const btn = document.getElementById("productsBtn");
+  const menu = document.getElementById("productsMenu");
+
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    menu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", function () {
+    menu.classList.remove("show");
+  });
+</script>
 
 body {
   background: #fff;
