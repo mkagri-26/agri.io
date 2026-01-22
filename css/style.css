@@ -182,42 +182,11 @@ body {
 }
 
 /* موبايل */
-@media (max-width: 900px) {
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    width: 100%;
-    flex-direction: column;
-    display: none;
-    border-top: 1px solid #ddd;
-  }
-
-  .main-nav a,
-  .products-dropdown {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-    margin: 0;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .products-dropdown button {
-    width: 100%;
-    text-align: right;
-  }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: none;
-  }
+.products-dropdown {
+  position: relative;
 }
