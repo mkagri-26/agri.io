@@ -99,3 +99,57 @@ body {
   color: #0f6a3c;
   text-decoration: underline;
 }
+/* ===== STICKY HEADER ===== */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* ===== DROPDOWN ===== */
+.products-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.products-dropdown button {
+  background: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #000;
+}
+
+.products-dropdown button:hover {
+  color: #0f6a3c;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #f3f3f3;
+  color: #0f6a3c;
+}
+
+/* ACTIVE */
+.dropdown-menu.show {
+  display: block;
+}
+
