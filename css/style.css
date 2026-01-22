@@ -136,6 +136,14 @@ body {
 .products-dropdown button:hover {
   color: #0f6a3c;
 }
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("show");
+  });
+</script>
 
 .dropdown-menu {
   display: none;
@@ -166,3 +174,50 @@ body {
   display: block;
 }
 
+/* ===== MOBILE MENU ===== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* موبايل */
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .main-nav a,
+  .products-dropdown {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .products-dropdown button {
+    width: 100%;
+    text-align: right;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+}
