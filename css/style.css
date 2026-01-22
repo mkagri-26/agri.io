@@ -1,192 +1,291 @@
-/* ===== RESET ===== */
+/* =====================
+   RESET & BASE
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
-<script>
-  const btn = document.getElementById("productsBtn");
-  const menu = document.getElementById("productsMenu");
-
-  btn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    menu.classList.toggle("show");
-  });
-
-  document.addEventListener("click", function () {
-    menu.classList.remove("show");
-  });
-</script>
 
 body {
-  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
   color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
-  width: 92%;
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
 }
 
-/* ===== الشريط الأول ===== */
+/* =====================
+   HEADER – STRIP 1 (LANG)
+===================== */
 .top-bar {
-  background: #111;
+  background: #2f6b2f;
   color: #fff;
   font-size: 13px;
 }
 
-.top-flex {
+.top-bar .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.languages a {
+.top-bar a {
   color: #fff;
-  text-decoration: none;
-  margin-right: 10px;
+  opacity: 0.8;
 }
 
-.languages a:hover {
-  text-decoration: underline;
+.top-bar a:hover {
+  opacity: 1;
 }
 
-.contact {
-  white-space: nowrap;
-}
-
-/* ===== الشريط الثاني ===== */
+/* =====================
+   HEADER – STRIP 2 (MAIN)
+===================== */
 .main-header {
   background: #fff;
   border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.main-flex {
+.main-header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  justify-content: space-between;
+  height: 70px;
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
-  color: #000;
+  color: #2f6b2f;
+}
+
+/* =====================
+   NAVIGATION (DESKTOP)
+===================== */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .main-nav a {
-  margin-left: 22px;
-  text-decoration: none;
-  color: #000;
   font-size: 15px;
+  color: #222;
+  position: relative;
 }
 
 .main-nav a:hover {
-  color: #0f6a3c;
+  color: #2f6b2f;
 }
 
-/* ===== الشريط الثالث ===== */
-.products-bar {
-  background: #f6f6f6;
-  border-bottom: 1px solid #ddd;
-}
-
-.products-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px 0;
-}
-
-.products-nav a {
-  margin: 6px 14px;
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-}
-
-.products-nav a:hover {
-  color: #0f6a3c;
-  text-decoration: underline;
-}
-/* ===== STICKY HEADER ===== */
-.header-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
-
-/* ===== DROPDOWN ===== */
+/* =====================
+   PRODUCTS DROPDOWN
+===================== */
 .products-dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .products-dropdown button {
   background: none;
   border: none;
-  font-size: 15px;
   cursor: pointer;
-  color: #000;
+  font-size: 15px;
+  color: #222;
 }
 
 .products-dropdown button:hover {
-  color: #0f6a3c;
+  color: #2f6b2f;
 }
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
-
-  menuToggle.addEventListener("click", function () {
-    mainNav.classList.toggle("show");
-  });
-</script>
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 35px;
-  left: 0;
+  top: 100%;
+  right: 0;
   background: #fff;
-  min-width: 220px;
+  min-width: 230px;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .dropdown-menu a {
   display: block;
-  padding: 10px 14px;
-  text-decoration: none;
-  color: #000;
+  padding: 12px 15px;
   font-size: 14px;
+  border-bottom: 1px solid #eee;
 }
 
 .dropdown-menu a:hover {
-  background: #f3f3f3;
-  color: #0f6a3c;
+  background: #f4f4f4;
+  color: #2f6b2f;
 }
 
-/* ACTIVE */
-.dropdown-menu.show {
-  display: block;
+/* Hover desktop */
+@media (min-width: 901px) {
+  .products-dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
-/* ===== MOBILE MENU ===== */
+/* =====================
+   MOBILE MENU
+===================== */
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
 }
 
-/* موبايل */
-.main-nav {
-  display: flex;
-  align-items: center;
+/* =====================
+   HERO
+===================== */
+.hero {
+  background: #f5f7f5;
+  padding: 70px 0;
+  text-align: center;
 }
 
-.products-dropdown {
-  position: relative;
+.hero h1 {
+  font-size: 36px;
+  color: #2f6b2f;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* =====================
+   PRODUCTS GRID
+===================== */
+.products {
+  padding: 60px 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2f6b2f;
+  font-weight: bold;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #2f6b2f;
+  color: #fff;
+  padding: 40px 0;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer a {
+  display: block;
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+/* =====================
+   RESPONSIVE (MOBILE)
+===================== */
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .main-nav a,
+  .products-dropdown {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .products-dropdown button {
+    width: 100%;
+    text-align: right;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
 }
