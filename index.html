@@ -3,151 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <title>المؤسسة القومية للتنمية الزراعية</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Tahoma,Arial}
-body{color:#333}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica}
+body{color:#222;background:#fff}
 
 /* ===== HEADER ===== */
-header{position:sticky;top:0;z-index:999}
+header{position:sticky;top:0;z-index:999;background:#fff}
 
-/* bar 1 */
-.lang-bar{
-    background:#222;
-    text-align:center;
-    padding:6px;
-}
-.lang-bar a{
+/* Top bar */
+.top-bar{
+    background:#1f1f1f;
     color:#ccc;
-    margin:0 10px;
-    text-decoration:none;
     font-size:13px;
-}
-.lang-bar a.active{color:#fff;font-weight:bold}
-
-/* bar 2 */
-.main-bar{
-    background:#006633;
-}
-.main-bar ul{
-    list-style:none;
     display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:6px 20px;
 }
-.main-bar a{
-    color:#fff;
-    text-decoration:none;
-    padding:12px 15px;
-    display:block;
-    font-size:14px;
-}
+.top-bar a{color:#ccc;text-decoration:none;margin-left:10px}
 
-/* bar 3 */
-.products-bar{
-    background:#f1f1f1;
+/* Main nav */
+.main-nav{
     border-bottom:1px solid #ddd;
 }
-.products-bar ul{
+.main-nav ul{
     list-style:none;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
 }
-.products-bar a{
+.main-nav a{
+    display:block;
+    padding:14px 18px;
+    text-decoration:none;
+    color:#222;
+    font-size:14px;
+}
+.main-nav a:hover{background:#f3f3f3}
+
+/* Products bar */
+.products-nav{
+    background:#f6f6f6;
+    border-bottom:1px solid #ddd;
+}
+.products-nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.products-nav a{
+    display:block;
+    padding:10px 14px;
+    font-size:13px;
     color:#333;
     text-decoration:none;
-    padding:10px 12px;
-    display:block;
-    font-size:13px;
 }
+.products-nav a:hover{background:#e1e1e1}
 
-/* ===== MAIN ===== */
+/* ===== HERO ===== */
 .hero{
+    padding:80px 20px;
     text-align:center;
-    padding:70px 20px;
-    background:#f5f5f5;
+    background:#fafafa;
 }
-.hero img{height:90px;margin-bottom:15px}
-.hero h1{font-size:26px;margin-bottom:10px}
-.hero p{max-width:700px;margin:auto;line-height:1.8}
+.hero img{
+    height:90px;
+    margin-bottom:20px;
+}
+.hero h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+}
 
+/* ===== PRODUCTS GRID ===== */
 .section{
-    max-width:900px;
-    margin:60px auto;
-    text-align:center;
-    padding:0 15px;
+    padding:60px 20px;
 }
-.section h2{margin-bottom:15px}
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:24px;
+}
+
+.products-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.product-card{
+    border:1px solid #ddd;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+}
+.product-card:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.product-card h3{
+    margin-bottom:10px;
+    font-size:18px;
+}
+.product-card p{
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
 
 /* ===== FOOTER ===== */
 footer{
-    background:#222;
-    color:#fff;
+    background:#1f1f1f;
+    color:#ccc;
+    padding:40px 20px;
     text-align:center;
-    padding:25px 15px;
     font-size:14px;
 }
+footer p{margin-bottom:8px}
 </style>
 </head>
 
 <body>
 
 <header>
-    <!-- bar 1 -->
-    <div class="lang-bar">
-        <a href="#" class="active">العربية</a>
-        <a href="#">English</a>
+
+    <!-- Top -->
+    <div class="top-bar">
+        <div>info@agriprosrls.io | +000 000 0000</div>
+        <div>
+            <a href="#">AR</a>
+            <a href="#">EN</a>
+        </div>
     </div>
 
-    <!-- bar 2 -->
-    <div class="main-bar">
+    <!-- Main pages -->
+    <nav class="main-nav">
         <ul>
-            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#">الرئيسية</a></li>
             <li><a href="#">من نحن</a></li>
-            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="#">المنتجات</a></li>
             <li><a href="#">الجودة</a></li>
             <li><a href="#">الأخبار</a></li>
             <li><a href="#">اتصل بنا</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- bar 3 -->
-    <div class="products-bar">
+    <!-- Products categories -->
+    <nav class="products-nav">
         <ul>
-            <li><a href="#">أسمدة ورقية</a></li>
-            <li><a href="#">أسمدة أرضية</a></li>
-            <li><a href="#">محفزات النمو</a></li>
-            <li><a href="#">عناصر صغرى</a></li>
-            <li><a href="#">منتجات عضوية</a></li>
+            <li><a href="#">Foliar Fertilizers</a></li>
+            <li><a href="#">Soil Fertilizers</a></li>
+            <li><a href="#">Growth Stimulants</a></li>
+            <li><a href="#">Micronutrients</a></li>
+            <li><a href="#">Organic Products</a></li>
+            <li><a href="#">Special Formulas</a></li>
         </ul>
-    </div>
+    </nav>
+
 </header>
 
 <main>
-    <section class="hero">
-        <img src="logo.png" alt="logo">
-        <h1>المؤسسة القومية للتنمية الزراعية</h1>
-        <p>
-            حلول متقدمة في مجال الأسمدة والمركبات الزراعية
-            لدعم التنمية الزراعية المستدامة.
-        </p>
-    </section>
 
-    <section class="section">
-        <h2>عن المؤسسة</h2>
-        <p>
-            نعمل على تطوير وتوزيع مركبات وأسمدة زراعية
-            عالية الجودة تلبي احتياجات المزارع العربي.
-        </p>
-    </section>
+<section class="hero">
+    <img src="logo.png" alt="logo">
+    <h1>المؤسسة القومية للتنمية الزراعية</h1>
+    <p>
+        شركة متخصصة في تطوير وتسويق الأسمدة والمركبات الزراعية
+        وفق أحدث المعايير العالمية لدعم الإنتاج الزراعي المستدام.
+    </p>
+</section>
+
+<section class="section">
+    <h2>منتجات مختارة</h2>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <h3>GreenMax Plus</h3>
+            <p>سماد ورقي متكامل يعزز النمو الخضري ويحسن كفاءة التمثيل الضوئي.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>RootPower</h3>
+            <p>منشط جذور متطور يساعد على امتصاص العناصر الغذائية.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>MicroMix</h3>
+            <p>خليط عناصر صغرى متوازن لمعالجة أعراض النقص.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>YieldBoost</h3>
+            <p>محفز إنتاجية يعمل على تحسين العقد وزيادة المحصول.</p>
+        </div>
+
+    </div>
+</section>
+
 </main>
 
 <footer>
-    <p><strong>المؤسسة القومية للتنمية الزراعية</strong></p>
+    <p><strong>Almuasisuh Alqawmih for Agricultural Development</strong></p>
+    <p>العنوان: مركز التنمية الزراعية</p>
     <p>الهاتف: +000 000 0000</p>
-    <p>البريد: info@agriprosrls.io</p>
+    <p>البريد الإلكتروني: info@agriprosrls.io</p>
 </footer>
 
 </body>
