@@ -1,223 +1,80 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>المؤسسة القومية للتنمية الزراعية</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica}
-body{color:#222;background:#fff}
-
-/* ===== HEADER ===== */
-header{position:sticky;top:0;z-index:999;background:#fff}
-
-/* Top bar */
-.top-bar{
-    background:#1f1f1f;
-    color:#ccc;
-    font-size:13px;
-    display:flex;
-    justify-content:space-between;
-    padding:6px 20px;
-}
-.top-bar a{color:#ccc;text-decoration:none;margin-left:10px}
-
-/* Main nav */
-.main-nav{
-    border-bottom:1px solid #ddd;
-}
-.main-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-.main-nav a{
-    display:block;
-    padding:14px 18px;
-    text-decoration:none;
-    color:#222;
-    font-size:14px;
-}
-.main-nav a:hover{background:#f3f3f3}
-
-/* Products bar */
-.products-nav{
-    background:#f6f6f6;
-    border-bottom:1px solid #ddd;
-}
-.products-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-.products-nav a{
-    display:block;
-    padding:10px 14px;
-    font-size:13px;
-    color:#333;
-    text-decoration:none;
-}
-.products-nav a:hover{background:#e1e1e1}
-
-/* ===== HERO ===== */
-.hero{
-    padding:80px 20px;
-    text-align:center;
-    background:#fafafa;
-}
-.hero img{
-    height:90px;
-    margin-bottom:20px;
-}
-.hero h1{
-    font-size:28px;
-    margin-bottom:10px;
-}
-.hero p{
-    max-width:750px;
-    margin:auto;
-    line-height:1.8;
-    color:#555;
-}
-
-/* ===== PRODUCTS GRID ===== */
-.section{
-    padding:60px 20px;
-}
-.section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:24px;
-}
-
-.products-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.product-card{
-    border:1px solid #ddd;
-    padding:25px;
-    text-align:center;
-    transition:.3s;
-}
-.product-card:hover{
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-.product-card h3{
-    margin-bottom:10px;
-    font-size:18px;
-}
-.product-card p{
-    font-size:14px;
-    color:#555;
-    line-height:1.6;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    background:#1f1f1f;
-    color:#ccc;
-    padding:40px 20px;
-    text-align:center;
-    font-size:14px;
-}
-footer p{margin-bottom:8px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri - الرئيسية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="font-sans bg-gray-50">
 
-<body>
-
-<header>
-
-    <!-- Top -->
-    <div class="top-bar">
-        <div>info@agriprosrls.io | +000 000 0000</div>
-        <div>
-            <a href="#">AR</a>
-            <a href="#">EN</a>
+    <!-- Navbar -->
+    <header class="bg-green-700 text-white">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="index.html" class="text-xl font-bold">Agri</a>
+            <nav class="space-x-6">
+                <a href="index.html" class="hover:underline">الرئيسية</a>
+                <a href="about.html" class="hover:underline">من نحن</a>
+                <a href="products.html" class="hover:underline">المنتجات</a>
+                <a href="quality.html" class="hover:underline">الجودة</a>
+                <a href="news.html" class="hover:underline">الأخبار</a>
+                <a href="contact.html" class="hover:underline">اتصل بنا</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- Main pages -->
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">من نحن</a></li>
-            <li><a href="#">المنتجات</a></li>
-            <li><a href="#">الجودة</a></li>
-            <li><a href="#">الأخبار</a></li>
-            <li><a href="#">اتصل بنا</a></li>
-        </ul>
-    </nav>
+    <!-- Hero Section -->
+    <section class="bg-green-100 text-green-900 py-20 text-center">
+        <h1 class="text-5xl font-bold mb-4">أهلاً بكم في Agri</h1>
+        <p class="text-lg max-w-xl mx-auto">أفضل حلول الزراعة الذكية والجودة العالية في المنتجات الزراعية.</p>
+        <a href="products.html" class="inline-block mt-6 px-6 py-3 bg-green-700 text-white rounded hover:bg-green-800">اكتشف منتجاتنا</a>
+    </section>
 
-    <!-- Products categories -->
-    <nav class="products-nav">
-        <ul>
-            <li><a href="#">Foliar Fertilizers</a></li>
-            <li><a href="#">Soil Fertilizers</a></li>
-            <li><a href="#">Growth Stimulants</a></li>
-            <li><a href="#">Micronutrients</a></li>
-            <li><a href="#">Organic Products</a></li>
-            <li><a href="#">Special Formulas</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<main>
-
-<section class="hero">
-    <img src="logo.png" alt="logo">
-    <h1>المؤسسة القومية للتنمية الزراعية</h1>
-    <p>
-        شركة متخصصة في تطوير وتسويق الأسمدة والمركبات الزراعية
-        وفق أحدث المعايير العالمية لدعم الإنتاج الزراعي المستدام.
-    </p>
-</section>
-
-<section class="section">
-    <h2>منتجات مختارة</h2>
-
-    <div class="products-grid">
-
-        <div class="product-card">
-            <h3>GreenMax Plus</h3>
-            <p>سماد ورقي متكامل يعزز النمو الخضري ويحسن كفاءة التمثيل الضوئي.</p>
+    <!-- Featured Products Section -->
+    <section class="container mx-auto py-16">
+        <h2 class="text-3xl font-semibold mb-6 text-center">منتجات مميزة</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
+                <img src="https://via.placeholder.com/200x150" alt="منتج 1" class="mb-4 w-full rounded">
+                <h3 class="font-bold mb-2">منتج 1</h3>
+                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
+                <a href="product1.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
+            </div>
+            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
+                <img src="https://via.placeholder.com/200x150" alt="منتج 2" class="mb-4 w-full rounded">
+                <h3 class="font-bold mb-2">منتج 2</h3>
+                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
+                <a href="product2.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
+            </div>
+            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
+                <img src="https://via.placeholder.com/200x150" alt="منتج 3" class="mb-4 w-full rounded">
+                <h3 class="font-bold mb-2">منتج 3</h3>
+                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
+                <a href="product3.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
+            </div>
+            <div class="bg-white shadow p-4 rounded hover:shadow-lg transition">
+                <img src="https://via.placeholder.com/200x150" alt="منتج 4" class="mb-4 w-full rounded">
+                <h3 class="font-bold mb-2">منتج 4</h3>
+                <p class="text-gray-600 mb-2">وصف قصير للمنتج.</p>
+                <a href="product4.html" class="text-green-700 hover:underline">عرض التفاصيل</a>
+            </div>
         </div>
+    </section>
 
-        <div class="product-card">
-            <h3>RootPower</h3>
-            <p>منشط جذور متطور يساعد على امتصاص العناصر الغذائية.</p>
+    <!-- About Section -->
+    <section class="bg-green-50 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">من نحن</h2>
+            <p class="max-w-2xl mx-auto text-gray-700">شركة Agri متخصصة في تقديم حلول زراعية مبتكرة، مع التركيز على الجودة والاستدامة.</p>
         </div>
+    </section>
 
-        <div class="product-card">
-            <h3>MicroMix</h3>
-            <p>خليط عناصر صغرى متوازن لمعالجة أعراض النقص.</p>
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white py-8 mt-12">
+        <div class="container mx-auto text-center">
+            <p>© 2026 Agri. جميع الحقوق محفوظة.</p>
         </div>
-
-        <div class="product-card">
-            <h3>YieldBoost</h3>
-            <p>محفز إنتاجية يعمل على تحسين العقد وزيادة المحصول.</p>
-        </div>
-
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <p><strong>Almuasisuh Alqawmih for Agricultural Development</strong></p>
-    <p>العنوان: مركز التنمية الزراعية</p>
-    <p>الهاتف: +000 000 0000</p>
-    <p>البريد الإلكتروني: info@agriprosrls.io</p>
-</footer>
+    </footer>
 
 </body>
 </html>
