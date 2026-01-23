@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{PRODUCT_NAME}} | AGRIPRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- HEADER (نفسه في كل الصفحات) -->
+
+<section class="hero">
+  <div class="container">
+    <h1>{{PRODUCT_NAME}}</h1>
+    <p>{{PRODUCT_TAGLINE}}</p>
+  </div>
+</section>
+
+<section class="products">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+
+    <div>
+      <img src="../images/{{IMAGE}}" style="width:100%;border:1px solid #ddd">
+    </div>
+
+    <div>
+      <h2>Description</h2>
+      <p>{{DESCRIPTION}}</p>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>{{BENEFIT_1}}</li>
+        <li>{{BENEFIT_2}}</li>
+        <li>{{BENEFIT_3}}</li>
+        <li>{{BENEFIT_4}}</li>
+      </ul>
+
+      <h2>Dosage</h2>
+      <p>{{DOSAGE}}</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="products">
+  <div class="container">
+    <h2>Technical Specification</h2>
+
+    <table style="width:100%;border-collapse:collapse">
+      <tr>
+        <th style="border:1px solid #ddd;padding:12px">Component</th>
+        <th style="border:1px solid #ddd;padding:12px">Value</th>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd;padding:12px">{{SPEC_1}}</td>
+        <td style="border:1px solid #ddd;padding:12px">{{VALUE_1}}</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd;padding:12px">{{SPEC_2}}</td>
+        <td style="border:1px solid #ddd;padding:12px">{{VALUE_2}}</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+</body>
+</html>
