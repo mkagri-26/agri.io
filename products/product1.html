@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foliar Mix 20-20-20 | AGRIPRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+
+  <!-- STRIP 1 -->
+  <div class="top-bar">
+    <div class="container">
+      <a href="#">EN</a>
+      <a href="#">AR</a>
+      <a href="#">FR</a>
+    </div>
+  </div>
+
+  <!-- STRIP 2 -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">AGRIPRO</div>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+
+        <div class="products-dropdown">
+          <button id="productsBtn">Products ▾</button>
+          <div class="dropdown-menu" id="productsMenu">
+            <a href="products/foliar.html">Foliar Fertilizers</a>
+            <a href="products/soil.html">Soil Fertilizers</a>
+            <a href="products/npk.html">NPK Fertilizers</a>
+          </div>
+        </div>
+
+        <a href="quality.html">Quality</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">☰</div>
+    </div>
+  </div>
+
+</header>
+
+<!-- ================= PRODUCT HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <h1>Foliar Mix 20-20-20</h1>
+    <p>Balanced NPK foliar fertilizer for all crops</p>
+  </div>
+</section>
+
+<!-- ================= PRODUCT CONTENT ================= -->
+<section class="products">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
+    <!-- PRODUCT IMAGE -->
+    <div>
+      <img src="images/product1.jpg" alt="Foliar Mix" style="width:100%;border:1px solid #ddd">
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div>
+      <h2>Description</h2>
+      <p>
+        Foliar Mix 20-20-20 is a fully water-soluble fertilizer
+        designed to provide balanced nutrition during all growth stages.
+      </p>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>✔ Rapid nutrient absorption</li>
+        <li>✔ Improves vegetative growth</li>
+        <li>✔ Enhances yield and quality</li>
+        <li>✔ Suitable for all crops</li>
+      </ul>
+
+      <h2>Recommended Dosage</h2>
+      <p>Foliar application: 200–300 g / 100 L water</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= DATASHEET TABLE ================= -->
+<section class="products">
+  <div class="container">
+    <h2 style="margin-bottom:20px">Technical Specification</h2>
+
+    <table style="width:100%;border-collapse:collapse">
+      <tr>
+        <th style="border:1px solid #ddd;padding:12px;text-align:left">Component</th>
+        <th style="border:1px solid #ddd;padding:12px;text-align:left">Percentage</th>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd;padding:12px">Nitrogen (N)</td>
+        <td style="border:1px solid #ddd;padding:12px">20%</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd;padding:12px">Phosphorus (P2O5)</td>
+        <td style="border:1px solid #ddd;padding:12px">20%</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd;padding:12px">Potassium (K2O)</td>
+        <td style="border:1px solid #ddd;padding:12px">20%</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div>
+      <h4>AGRIPRO</h4>
+      <p>Advanced agricultural solutions</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <a href="#">Foliar</a>
+      <a href="#">Soil</a>
+      <a href="#">NPK</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: info@agripro.com</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  const productsBtn = document.getElementById("productsBtn");
+  const productsMenu = document.getElementById("productsMenu");
+
+  function isMobile() {
+    return window.innerWidth <= 900;
+  }
+
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("show");
+  });
+
+  productsBtn.addEventListener("click", function(e){
+    if(isMobile()){
+      e.preventDefault();
+      productsMenu.classList.toggle("show");
+    }
+  });
+
+  document.addEventListener("click", function(){
+    if(isMobile()){
+      productsMenu.classList.remove("show");
+    }
+  });
+</script>
+
+</body>
+</html>
